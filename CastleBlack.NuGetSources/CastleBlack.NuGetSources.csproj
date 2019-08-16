@@ -10,6 +10,7 @@
         <RepositoryUrl>https://github.com/castle-black/dotnet-nuget-sources</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+        <Authors>shawnallen85</Authors>
     </PropertyGroup>
 
     <PropertyGroup>
