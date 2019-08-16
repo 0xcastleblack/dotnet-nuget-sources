@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp2.1</TargetFramework>
+        <PackAsTool>true</PackAsTool>
+        <PackageOutputPath>$(OutDir)</PackageOutputPath>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Description>A tool to help manage NuGet sources</Description>
+        <Company>Castle Black</Company>
+        <Copyright>Copyright © Castle Black</Copyright>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="ConsoleTables" Version="2.3.0"/>
+        <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="2.3.4"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="DefaultNuGet.Config.xml"/>
+        <EmbeddedResource Include="DefaultNuGet.Config.xml">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </EmbeddedResource>
+    </ItemGroup>
+
+</Project>
