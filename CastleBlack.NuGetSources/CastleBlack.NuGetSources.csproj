@@ -7,6 +7,9 @@
         <ToolCommandName>cb-nuget-src</ToolCommandName>
         <PackageOutputPath>$(OutDir)</PackageOutputPath>
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <RepositoryUrl>https://github.com/castle-black/dotnet-nuget-sources</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -25,6 +28,10 @@
         <EmbeddedResource Include="DefaultNuGet.Config.xml">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
     </ItemGroup>
 
 </Project>
